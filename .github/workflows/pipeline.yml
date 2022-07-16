@@ -4,9 +4,9 @@ on:
   push:
     branches: # <1>
       - main
-defaults: # DO NOT INCLUDE
-  run:
-    working-directory: ./ecomm-system
+# defaults: # DO NOT INCLUDE
+#  run:
+#    working-directory: ./ecomm-system
 jobs:
   build:
     name: Build App
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Go 1.x #
         uses: actions/setup-go@v2
         with:
-          go-version: ^1.16
+          go-version: ^1.18
 
       - name: Check out code into the Go module directory #
         uses: actions/checkout@v2

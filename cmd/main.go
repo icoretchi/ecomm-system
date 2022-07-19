@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/icoretchi/ecomm-system/handlers"
 	"log"
 	"net/http"
 
@@ -14,6 +15,7 @@ func main() {
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("/translate/hello", rest.TranslateHandler)
+	mux.HandleFunc("/health", handlers.HealthCheck)
 
 	log.Printf("listening on %s\n", addr)
 
